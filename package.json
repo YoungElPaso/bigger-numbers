@@ -7,5 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jesse Sutherland",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "tachyons": "^4.9.0"
+  }
 }
