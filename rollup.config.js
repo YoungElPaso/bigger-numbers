@@ -10,5 +10,8 @@ export default {
     file: "bundle.js",
     format: "iife"
   },
+  watch: {
+    include: ["src/**", "app.js"]
+  },
   plugins: [riot(options)]
 };
