@@ -6,7 +6,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "echo \"Running Dev Server\" && rollup --watch -c & serve . && fg",
+    "dev":
+      "echo \"Running Dev Server\" && rollup --watch -c & riot -w --config riot.config.js & serve . && fg",
     "rollup": "rollup -c"
   },
   "author": "Jesse Sutherland",
