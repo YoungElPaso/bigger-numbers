@@ -9,5 +9,6 @@
   "author": "Jesse Sutherland",
   "license": "ISC",
   "dependencies": {
+    "riot": "^3.7.4"
   }
 }
