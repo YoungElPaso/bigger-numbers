@@ -1,7 +1,7 @@
 {
   "name": "bigger-numbers",
   "version": "1.0.0",
-  "description": "A custom web component element for displaying some text and numbers in an interesting way",
+  "description": "Custome components for displaying some text and numbers in an interesting way",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +9,5 @@
   "author": "Jesse Sutherland",
   "license": "ISC",
   "dependencies": {
-    "tachyons": "^4.9.0"
   }
 }
