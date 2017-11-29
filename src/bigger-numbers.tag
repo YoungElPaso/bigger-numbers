@@ -1,9 +1,9 @@
 
 <bigger-numbers>
-  <p>Hi { message() }</p>
+  <p>Hi this is a bigger number component { message() }</p>
   <script>
     message() {
-      return 'there'
+      return 'cool!'
     }
   </script>
 
