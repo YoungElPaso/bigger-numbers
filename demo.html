@@ -20,9 +20,35 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world!</p>
+        <p>This page demos RiotJS components</p>
 
-        <bigger-numbers></bigger-numbers>
+        <bigger-numbers info="This is a Big Numbers component">
+            This example illustrates the what happens with content inserted. It gets put into a given slot!
+        </bigger-numbers>
+
+        <p>The example below illustrates the ideal scenario, just options (html attributes) used:</p>
+        <bigger-numbers preamble="Located in Montreal" value="30" caption="Students, Staff and Faculty!"></bigger-numbers>
+
+        <p>The example below illustrates what happens when content is inserted into a more specific template.</p>
+        <bigger-numbers preamble="" value="" caption="" styling="center even-bigger">
+            <yield to="preamble">
+                <div class="bn-preamble">
+                    This is a preamble!
+                </div>
+            </yield>
+            <yield to="value">
+                <div class="bn-val">
+                    30
+                </div>
+             </yield>
+            <yield to="caption">
+                <div class="content">
+                    This is content!
+                </div>
+            </yield>
+        </bigger-numbers>
+
+
 
         <!-- RiotJS CDN -->
         <script src="https://cdn.jsdelivr.net/npm/riot@3.7.4/riot.min.js"></script>
