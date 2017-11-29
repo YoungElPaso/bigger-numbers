@@ -1,8 +1,8 @@
 // rollup.config.js
 
-import riot from "rollup-plugin-riot";
+// import riot from "rollup-plugin-riot";
 
-import options from "./riot.config.js";
+// import options from "./riot.config.js";
 
 export default {
   input: "app.js",
@@ -11,7 +11,8 @@ export default {
     format: "iife"
   },
   watch: {
-    include: ["src/**", "app.js"]
-  },
-  plugins: [riot(options)]
+    include: ["./src/**", "./compiled-tags/**", "app.js"]
+  }
+  // Not sure this plugin does all I need. Not sure it does watch
+  // plugins: [riot(options)]
 };
