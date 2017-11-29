@@ -1,0 +1,31 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+      <title>Bigger Numbers Component</title>
+        <!-- Load polyfills for webcomponents; note that "loader" will load these async. -->
+        <script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+        <!-- Load polyfills for es5 webcomponents. -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.19/custom-elements-es5-adapter.js"></script>
+        <!-- Load our custom components and bundle for rendering them.-->
+        <script src="../dist/index-with-deps.js"></script>
+    </head>
+    <body class="sans-serif bg-gray">
+      <div class="pa3 bg-mid-gray">
+        <h2 class="pink f2">Bigger Numbers</h2>
+      </div>
+      <div  class="pa3 bg-near-white">
+        
+        <p> Here's an example of a Big Numbers component with just default caption, image and values and no children (i.e. the base template):</p>
+        <big-number caption="{insert a short caption here}" value="{insert a number here, e.g 10}" ></big-number>
+
+        <p>Here's an example of a Big Numbers component with some user input values for the caption, value and image attribute:</p>
+        <big-number caption="minutes from the city center!" value="15" img="http://lorempixel.com/200/200/nature/"></big-number>
+
+        <p>Here's an example of  Bigger Numbers component with childen tags overriding everything:</p>
+        <big-number caption="This caption is overriden!" value="this value is overriden!">
+          <strong class="red">Override!</strong> These children elements are totally overriding the default compontent markup! This is not great!
+        </big-number>
+
+      </div>
+    </body>
+</html>

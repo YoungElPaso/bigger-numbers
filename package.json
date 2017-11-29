@@ -2,13 +2,22 @@
   "name": "bigger-numbers",
   "version": "1.0.0",
   "description": "A custom web component element for displaying some text and numbers in an interesting way",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jesse Sutherland",
   "license": "ISC",
   "dependencies": {
+    "@skatejs/renderer-preact": "^0.1.0",
+    "skatejs": "^5.0.0-beta.3",
+    "preact": "^8.2.6",
     "tachyons": "^4.9.0"
+  },
+  "devDependencies": {
+    "@skatejs/renderer-react": "0.0.0",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "skatejs-build": "^12.2.0"
   }
 }

@@ -1,0 +1,21 @@
+{
+  "name": "bigger-numbers",
+  "description": "A custom web component element for displaying some text and numbers in an interesting way",
+  "main": "src/index.js",
+  "authors": [
+    "Jesse Sutherland"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.19"
+  }
+}
