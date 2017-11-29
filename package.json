@@ -6,7 +6,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "echo \"Running Dev Server\" && rollup --watch -c && serve .",
+    "dev": "echo \"Running Dev Server\" && rollup --watch -c & serve . && fg",
     "rollup": "rollup -c"
   },
   "author": "Jesse Sutherland",
