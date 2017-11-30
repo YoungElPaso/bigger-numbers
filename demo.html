@@ -22,15 +22,15 @@
         <!-- Add your site or application content here -->
         <p>This page demos RiotJS components</p>
 
-        <bigger-numbers info="This is a Big Numbers component">
+        <biggernumbers info="This is a Big Numbers component">
             This example illustrates the what happens with content inserted. It gets put into a given slot!
-        </bigger-numbers>
+        </biggernumbers>
 
         <p>The example below illustrates the ideal scenario, just options (html attributes) used:</p>
-        <bigger-numbers preamble="Located in Montreal" value="30" caption="Students, Staff and Faculty!"></bigger-numbers>
+        <biggernumbers preamble="Located in Montreal" value="30" caption="Students, Staff and Faculty!"></biggernumbers>
 
         <p>The example below illustrates what happens when content is inserted into a more specific template.</p>
-        <bigger-numbers preamble="" value="" caption="" styling="center even-bigger">
+        <biggernumbers preamble="" value="" caption="" styling="center even-bigger">
             <yield to="preamble">
                 <div class="bn-preamble">
                     This is a preamble!
@@ -46,7 +46,23 @@
                     This is content!
                 </div>
             </yield>
-        </bigger-numbers>
+        </biggernumbers>
+
+
+        <p>The example below illustrates using nested components.</p>
+        <biggernumbers preamble="" value="" caption="" styling="center even-bigger">
+            <yield to="preamble">
+                <biggernumberspreamble>
+                    This is the preamble...
+                </biggernumberspreamble>
+            </yield>
+            <yield to="value">
+              <biggernumbersvalue>30</biggernumbersvalue>
+             </yield>
+            <yield to="caption">
+                <biggernumberscaption>This is content that explains the number.</biggernumberscaption>
+            </yield>
+        </biggernumbers>
 
 
 
