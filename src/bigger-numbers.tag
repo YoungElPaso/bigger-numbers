@@ -1,5 +1,5 @@
 
-<bigger-numbers>
+<biggernumbers>
 <div class="bignumber_wrapper {opts.styling}">
   <!-- Note the opts.info for additional notes... -->
     <div class="info" if={opts.info}>
@@ -56,4 +56,4 @@
       font-size: xx-large;
     };
   </style>
-</bigger-numbers>
+</biggernumbers>
