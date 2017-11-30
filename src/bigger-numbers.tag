@@ -37,6 +37,10 @@
     // TODO: need a condtion to set opts if yield exists so they don't collide.
     // Surely there is an API to inspect that.
     // Although which should take precedence is not obvious...
+    // 
+    // TODO: provide a working example of why this is good. I.e. how we can progressively enhance BN because of components.
+    // For instance, in on('mount') we could hook in D3 to re-render a
+    // value in a dynamic way (heat map, size or whatever). This could be opt-in too by passing a 'dynamic-value' boolean opt/attribute on the tag, checking for it and running whatever function (say D3) on the value at will.
   </script>
 
   <style>
