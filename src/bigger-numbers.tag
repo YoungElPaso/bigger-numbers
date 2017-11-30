@@ -47,8 +47,8 @@
     }
     :scope .bignumber_wrapper {
       border: 1px solid;
-      padding: 1em;
     };
+    /* Some scoped styles for kicks.*/
     :scope .bignumber_wrapper.center {
       text-align: center;
     };
