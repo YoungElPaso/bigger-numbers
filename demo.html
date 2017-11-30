@@ -64,6 +64,25 @@
             </yield>
         </biggernumbers>
 
+        <p>The example below illustrates using a root components, but then HTML tags as components.</p>
+        <biggernumbers preamble="" value="" caption="" styling="center even-bigger">
+            <yield to="preamble">
+                <div class="bn-pre" data-is="biggernumberspreamble">
+                    This is a preamble.
+                </div>
+            </yield>
+            <yield to="value">
+                <div class="bn-value" data-is="biggernumbersvalue">
+                    13 is a value
+                </div>
+            </yield>
+            <yield to="caption">
+                <div class="bn-caption" data-is="biggernumberscaption">
+                    This is a caption
+                </div> 
+            </yield>
+        </biggernumbers>
+
 
 
         <!-- RiotJS CDN -->
