@@ -14,6 +14,8 @@
     
     // Load the D3 mixin only if the opts say to. 
     // TODO: should the mixin be imported here? or in app.js?
+      // TODO: there should be a way to see if the mixin is defined right?
+      // Probably should be in the condition below...
     if (opts.enhance == 'true') {
       // console.log(this.opts);
       // console.log('adding D3 Mixin here to value...');
