@@ -83,6 +83,13 @@
             </yield>
         </biggernumbers>
 
+        <p> The example below illustrates using a mixin to enhance the value tag.</p>
+        <biggernumbers preamble="Sometimes your data just doesnt..."  styling="center">
+            <yield to ="value">
+                <biggernumbersvalue enhance="true" value="Pop!"></biggernumbersvalue>
+            </yield>
+        </biggernumbers>
+
 
 
         <!-- RiotJS CDN -->
