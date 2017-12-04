@@ -1,13 +1,11 @@
 {
   "name": "bigger-numbers",
   "version": "1.0.0",
-  "description":
-    "Custom components for displaying some text and numbers in an interesting way",
+  "description": "Custom components for displaying some text and numbers in an interesting way",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":
-      "echo \"Running Dev Server\" && rollup --watch -c & riot -w --config riot.config.js & serve . && fg",
+    "dev": "echo \"Running Dev Server\" && rollup --watch -c & riot -w --config riot.config.js & serve . && fg",
     "rollup": "rollup -c"
   },
   "author": "Jesse Sutherland",
@@ -17,7 +15,12 @@
   },
   "devDependencies": {
     "rollup": "^0.52.0",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-riot": "^1.1.0",
     "serve": "^6.4.1"
+  },
+  "optionalDependencies": {
+    "d3": "^4.12.0"
   }
 }
