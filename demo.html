@@ -83,11 +83,12 @@
             </yield>
         </biggernumbers>
 
-        <p> The example below illustrates using a mixin to enhance the value tag.</p>
+        <p> The example below illustrates using a mixin to enhance the value tag with the D3 visualization library. The value of the value option dynamically alters its appearance in scale and colour.</p>
         <biggernumbers preamble="Sometimes your data just doesnt..."  styling="center">
             <yield to ="value">
-                <biggernumbersvalue enhance="true" value="Pop!"></biggernumbersvalue>
+                <biggernumbersvalue enhance="true" value="25"></biggernumbersvalue>
             </yield>
+            <biggernumberscaption>pop!</biggernumberscaption>
         </biggernumbers>
 
 
