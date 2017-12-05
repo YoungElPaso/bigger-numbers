@@ -17165,7 +17165,19 @@ let D3Mixin = {
       // console.log("got the D3Mixin into the mix...");
       console.log("Mounted!", d3, this.root);
       // D3ify something!
-      select(this.root).style("background-color", "pink");
+      // Using interpolation to map range of values to a colour.
+      let range = 100;
+      let bgColor = sequential(cool).domain([0, range]);
+      let color = sequential(warm).domain([0, range]);
+      let fontSize = sequential(interpolateRound(0, range / 50));
+      let cValue = this.opts.value;
+      // Only works for a number value!
+      // If eValue isn't a number, let's assume something in the middle of
+      // the domain.
+      cValue = isNaN(cValue) ? 50 : cValue;
+      select(this.root).style("background-color", bgColor(cValue));
+      select(this.root).style("color", color(range - cValue));
+      select(this.root).style("font-size", fontSize(cValue) + "px");
     });
   }
 };
