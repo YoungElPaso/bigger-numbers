@@ -22,6 +22,20 @@
         <!-- Add your site or application content here -->
         <p>This page demos RiotJS components</p>
 
+        <p> This example uses a very simplified RiotJS tag with some fallback content for accessibility|graceful degrading ux:</p>
+        <bignumber value="20" caption="some caption" preamble="Heya!">
+            <biggernumbersvalue>
+                [13 is a default value]
+             </biggernumbersvalue>
+             <biggernumberscaption>
+                [This is a default caption]
+            </biggernumberscaption>
+        </bignumber>
+        <p>This example is the same tag, but without opts set, and so using fallback content:</p>
+        <bignumber>
+            Oh no! Not enough opts!
+        </bignumber>
+
         <biggernumbers info="This is a Big Numbers component">
             This example illustrates the what happens with content inserted. It gets put into a given slot!
         </biggernumbers>
@@ -90,6 +104,7 @@
             </yield>
             <biggernumberscaption>pop!</biggernumberscaption>
         </biggernumbers>
+
 
 
 
