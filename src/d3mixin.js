@@ -11,7 +11,7 @@ let D3Mixin = {
   init: function() {
     this.on("mount", function() {
       // console.log("got the D3Mixin into the mix...");
-      console.log("Mounted!", d3, this.root);
+      // console.log("Mounted!", d3, this.root);
       // D3ify something!
       // Using interpolation to map range of values to a colour.
       let range = 100;
