@@ -9,31 +9,29 @@
 -->
 <bignumber class="bignumber_wrapper">
   <div if={gotOpts} >
-    <div if={opts.preamble}>
+    <div if={opts.preamble} class="bignumber_content">
       {opts.preamble}
     </div>
-    <div if={opts.value}>
+    <div if={opts.value} class="bignumber_value">
       {opts.value}
     </div>
-    <div if={opts.caption}>
+    <div if={opts.caption} class="bignumber_content">
       {opts.caption}
     </div>
   </div>
   <!-- Pass child HTML (yielded content) into the fallback sub-component which handles displaying it.-->
-  <div if={showFallback}>
+  <div if={!gotOpts} >
     <fallback><yield/></fallback>
   </div>
+
   <script>
     // Check some stuff before mounting, maybe manipulate some opts.
     this.on('before-mount', function() {
-      console.log(this.tags, this.opts)
        // Since yield isn't easily controlled in this tag, work around to hide/show yield and fallback by controlling it in a sub-component.
-      // Default is to showYield.
-      this.showFallback = true;
       // If we have a value from opts, skip yielded fallback content.
       this.gotOpts = (this.opts.value && this.opts.caption) ? true : false;
       // Change showFallback depending on opts.
-      this.showFallback = !this.gotOpts;
+      // this.showFallback = !this.gotOpts;
     });
   </script>
 
