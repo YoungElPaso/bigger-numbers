@@ -2714,8 +2714,6 @@ function type(t) {
   return {type: t};
 }
 
-// Ignore right-click, since that should open the context menu.
-
 var pi$1 = Math.PI;
 
 var pi$2 = Math.PI;
@@ -3490,6 +3488,7 @@ var formatTypes = {
   "x": function(x) { return Math.round(x).toString(16); }
 };
 
+// [[fill]align][sign][symbol][0][width][,][.precision][type]
 var re = /^(?:(.)?([<>=^]))?([+\-\( ])?([$#])?(0)?(\d+)?(,)?(\.\d+)?([a-z%])?$/i;
 
 function formatSpecifier(specifier) {
@@ -3756,7 +3755,7 @@ var areaSum = adder();
 
 var deltaSum = adder();
 
-// Returns the signed angle of a cartesian point relative to [cosRadius, 0, 0].
+// Generates a circle centered at [0°, 0°], with a given radius and precision.
 
 var sum$1 = adder();
 
@@ -3771,9 +3770,6 @@ var lengthSum$1 = adder();
 // the 3D cross product in a quadrant I Cartesian coordinate system (+x is
 // right, +y is up). Returns a positive value if ABC is counter-clockwise,
 // negative if clockwise, and zero if the points are collinear.
-
-// deinterpolate(a, b)(x) takes a domain value x in [a,b] and returns the corresponding parameter t in [0,1].
-// reinterpolate(a, b)(t) takes a parameter t in [0,1] and returns the corresponding domain value x in [a,b].
 
 var tickFormat = function(domain, count, specifier) {
   var start = domain[0],
@@ -4970,7 +4966,10 @@ ReflectContext.prototype = {
   bezierCurveTo: function(x1, y1, x2, y2, x, y) { this._context.bezierCurveTo(y1, x1, y2, x2, y, x); }
 };
 
-// Liang–Barsky line clipping.
+// Bring D3 along for the ride.
+// TODO: change depenendencies to JUST what d3 we want.
+// Ie Bring along *certain* d3 modules for the ride!
+// import { scaleLinear } from "d3-scale";
 
 let D3Mixin = {
   init: function() {
@@ -5032,6 +5031,9 @@ console.info(riot ? "RiotJS is loaded!" : null);
 riot.mixin("d3mixin", D3Mixin);
 
 // Import the compiled Bigger Numbers tags.
+// Import new compiled, simplified tag.
+// Import new generic fallback tag.
+// Mount RiotJS elements.
 riot.mount("*");
 
 }());
