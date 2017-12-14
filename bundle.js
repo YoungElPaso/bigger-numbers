@@ -5017,7 +5017,6 @@ riot.tag2('bignumber', '<div if="{gotOpts}"> <div if="{opts.preamble}" class="bi
     this.on('before-mount', function() {
 
       this.gotOpts = (this.opts.value && this.opts.caption) ? true : false;
-
     });
 });
 
