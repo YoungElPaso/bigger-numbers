@@ -11,6 +11,11 @@ import "./compiled-tags/bigger-numbers-value.js";
 import "./compiled-tags/bigger-numbers-caption.js";
 import "./compiled-tags/bigger-numbers-preamble.js";
 
+// Import new compiled, simplified tag.
+import "./compiled-tags/big-number.js";
+// Import new generic fallback tag.
+import "./compiled-tags/fallback.js";
+
 // Mount RiotJS elements. In this case just one, bigger-numbers.
 // TODO: make this conditional on some contexts.
 // I.e. don't do it on every page. But hey, this is just a demo!
