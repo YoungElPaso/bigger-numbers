@@ -1,5 +1,5 @@
 
-<biggernumbersvalue>
+<biggernumbersvalue class="bignumber_value">
     <!-- Note the opts.value condition... -->
       <span if={opts.value}>
         {opts.value}

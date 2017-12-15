@@ -1,5 +1,6 @@
 
-<biggernumberscaption>
+<biggernumberscaption class="bn-caption">
+    <div class="bignumber_content">
     <!-- Note the opts.caption condition... -->
       <span if={opts.caption}>
         {opts.caption}
@@ -7,6 +8,7 @@
       <!-- Yields children instead of ops, which is easier for a user to 
       enter. -->
       <yield />
+      </div>
   <script>
     //
   </script>
