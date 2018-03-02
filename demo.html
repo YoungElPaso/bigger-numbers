@@ -1,116 +1,120 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Bigger Numbers RiotJS Demo</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<!--         <link rel="manifest" href="site.webmanifest">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Bigger Numbers RiotJS Demo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--         <link rel="manifest" href="site.webmanifest">
         <link rel="apple-touch-icon" href="icon.png">
         Place favicon.ico in the root directory
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css"> -->
-    </head>
-    <body>
-        <!--[if lte IE 9]>
+</head>
+
+<body>
+    <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <p>This page demos RiotJS components</p>
+    <!-- Add your site or application content here -->
+    <p>This page demos RiotJS components</p>
 
-        <p> This example uses a very simplified RiotJS tag with some fallback content for accessibility|graceful degrading ux:</p>
-        <bignumber value="20" caption="some caption" preamble="Heya!">
-            <biggernumbersvalue>
-                [13 is a default value]
-             </biggernumbersvalue>
-             <biggernumberscaption>
-                [This is a default caption]
-            </biggernumberscaption>
-        </bignumber>
-        <p>This example is the same tag, but without opts set, and so using fallback content:</p>
-        <bignumber>
-            Oh no! Not enough opts!
-        </bignumber>
+    <p> This example uses a very simplified RiotJS tag with some fallback content for accessibility|graceful degrading ux:</p>
+    <bignumber value="20" caption="some caption" preamble="Heya!">
+        <biggernumbersvalue>
+            [13 is a default value]
+        </biggernumbersvalue>
+        <biggernumberscaption>
+            [This is a default caption]
+        </biggernumberscaption>
+    </bignumber>
+    <p>This example is the same tag, but without opts set, and so using fallback content:</p>
+    <bignumber>
+        Oh no! Not enough opts!
+    </bignumber>
 
-        <biggernumbers info="This is a Big Numbers component">
-            This example illustrates the what happens with content inserted. It gets put into a given slot!
-        </biggernumbers>
+    <biggernumbers info="This is a Big Numbers component">
+        This example illustrates the what happens with content inserted. It gets put into a given slot!
+    </biggernumbers>
 
-        <p>The example below illustrates the ideal scenario, just options (html attributes) used:</p>
-        <biggernumbers preamble="Located in Montreal" value="30" caption="Students, Staff and Faculty!"></biggernumbers>
+    <p>The example below illustrates the ideal scenario, just options (html attributes) used:</p>
+    <biggernumbers preamble="Located in Montreal" value="30" caption="Students, Staff and Faculty!"></biggernumbers>
 
-        <p>The example below illustrates what happens when content is inserted into a more specific template.</p>
-        <biggernumbers preamble="" value="" caption="" styling="center even-bigger">
-            <yield to="preamble">
-                <div class="bn-preamble">
-                    This is a preamble!
-                </div>
-            </yield>
-            <yield to="value">
-                <div class="bn-val">
-                    30
-                </div>
-             </yield>
-            <yield to="caption">
-                <div class="content">
-                    This is content!
-                </div>
-            </yield>
-        </biggernumbers>
-
-
-        <p>The example below illustrates using nested components.</p>
-        <biggernumbers preamble="" value="" caption="" styling="center even-bigger">
-            <yield to="preamble">
-                <biggernumberspreamble>
-                    This is the preamble...
-                </biggernumberspreamble>
-            </yield>
-            <yield to="value">
-              <biggernumbersvalue>30</biggernumbersvalue>
-             </yield>
-            <yield to="caption">
-                <biggernumberscaption>This is content that explains the number.</biggernumberscaption>
-            </yield>
-        </biggernumbers>
-
-        <p>The example below illustrates using a root components, but then HTML tags as components.</p>
-        <biggernumbers preamble="" value="" caption="" styling="center even-bigger">
-            <yield to="preamble">
-                <div class="bn-preamble" data-is="biggernumberspreamble">
-                    This is a preamble.
-                </div>
-            </yield>
-            <yield to="value">
-                <div class="bn-value" data-is="biggernumbersvalue">
-                    13 is a value
-                </div>
-            </yield>
-            <yield to="caption">
-                <div class="bn-caption" data-is="biggernumberscaption">
-                    This is a caption
-                </div> 
-            </yield>
-        </biggernumbers>
-
-        <p> The example below illustrates using a mixin to enhance the value tag with the D3 visualization library. The value of the value option dynamically alters its appearance in scale and colour.</p>
-        <biggernumbers preamble="Sometimes your data just doesnt..."  styling="center">
-            <yield to ="value">
-                <biggernumbersvalue enhance="true" value="25"></biggernumbersvalue>
-            </yield>
-            <biggernumberscaption>pop!</biggernumberscaption>
-        </biggernumbers>
+    <p>The example below illustrates what happens when content is inserted into a more specific template.</p>
+    <biggernumbers preamble="" value="" caption="" styling="center even-bigger">
+        <yield to="preamble">
+            <div class="bn-preamble">
+                This is a preamble!
+            </div>
+        </yield>
+        <yield to="value">
+            <div class="bn-val">
+                30
+            </div>
+        </yield>
+        <yield to="caption">
+            <div class="content">
+                This is content!
+            </div>
+        </yield>
+    </biggernumbers>
 
 
+    <p>The example below illustrates using nested components.</p>
+    <biggernumbers preamble="" value="" caption="" styling="center even-bigger">
+        <yield to="preamble">
+            <biggernumberspreamble>
+                This is the preamble...
+            </biggernumberspreamble>
+        </yield>
+        <yield to="value">
+            <biggernumbersvalue>30</biggernumbersvalue>
+        </yield>
+        <yield to="caption">
+            <biggernumberscaption>This is content that explains the number.</biggernumberscaption>
+        </yield>
+    </biggernumbers>
+
+    <p>The example below illustrates using a root components, but then HTML tags as components.</p>
+    <biggernumbers preamble="" value="" caption="" styling="center even-bigger">
+        <yield to="preamble">
+            <div class="bn-preamble" data-is="biggernumberspreamble">
+                This is a preamble.
+            </div>
+        </yield>
+        <yield to="value">
+            <div class="bn-value" data-is="biggernumbersvalue">
+                13 is a value
+            </div>
+        </yield>
+        <yield to="caption">
+            <div class="bn-caption" data-is="biggernumberscaption">
+                This is a caption
+            </div>
+        </yield>
+    </biggernumbers>
+
+    <p> The example below illustrates using a mixin to enhance the value tag with the D3 visualization library. The value of
+        the value option dynamically alters its appearance in scale and colour.</p>
+    <biggernumbers preamble="Sometimes your data just doesnt..." styling="center">
+        <yield to="value">
+            <biggernumbersvalue enhance="true" value="25"></biggernumbersvalue>
+        </yield>
+        <biggernumberscaption>pop!</biggernumberscaption>
+    </biggernumbers>
 
 
-        <!-- RiotJS CDN -->
-        <script src="https://cdn.jsdelivr.net/npm/riot@3.7.4/riot.min.js"></script>
-        <!-- App bundle, includes compiled tags and other logic -->
-        <script src="bundle.js"></script>
-    </body>
+
+
+    <!-- RiotJS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/riot@3.9/riot.min.js"></script>
+    <!-- App bundle, includes compiled tags and other logic -->
+    <script src="bundle.js"></script>
+</body>
+
 </html>
