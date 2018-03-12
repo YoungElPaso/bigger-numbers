@@ -14,8 +14,12 @@ console.info(riot ? "RiotJS is loaded!" : null);
 
 // Import the new bn-root tag.
 import "./compiled-tags/bn-root.js";
+
 // Import the new bn-value tag.
 import "./compiled-tags/bn-value.js";
+
+// Import the new bn-renderer tag.
+import "./compiled-tags/bn-renderer.js";
 
 // // Import new compiled, simplified tag.
 // import "./compiled-tags/big-number.js";
