@@ -1,6 +1,9 @@
-<bn-value>
+<!--  bn-value is a SFC that just renders some data  -->
+<bn-value value>
   <div>
-    BN-VALUE
+    <code>
+      BN-VALUE
+    </code>
   </div>
   
   <script>
