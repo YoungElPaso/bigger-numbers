@@ -1,22 +1,31 @@
 (function () {
 'use strict';
 
-riot.tag2('bn-root', '<div> BN-ROOT with: {this.opts.childCount} <yield></yield> <bn-value></bn-value> </div>', '', '', function(opts) {
+riot.tag2('bn-root', '<div> <code> BN-ROOT with: {this.opts.childCount} </code> <yield></yield> <bn-renderer rtype="{this.opts.rtype}" data="{this.opts.data}"> <yield></yield> </bn-renderer> </div>', '', '', function(opts) {
 
     this.on('before-mount', function() {
+      console.log('my opts are...', this.opts);
       console.log('my children are...', this.tags);
 
       this.opts.childCount = this.tags;
 
       console.log('c count', this.tags);
+
     });
 });
 
-riot.tag2('bn-value', '<div> BN-VALUE </div>', '', '', function(opts) {
+riot.tag2('bn-value', '<div> <code> BN-VALUE </code> </div>', '', 'value', function(opts) {
 
     this.on('before-mount', function() {
       console.log('my parent is...', this.parent.root);
     });
+});
+
+riot.tag2('bn-renderer', '<div> <code> bn-renderer: type: {this.opts.rtype} data: {this.opts.data} </code> <yield></yield> </div>', '', 'rtype="null" data', function(opts) {
+  this.on('before-mount', function() {
+
+    console.log('bn-renderer, my opts are...', this.opts.rType);
+  });
 });
 
 // Main file for bigger-numbers component.
